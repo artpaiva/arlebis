@@ -26,7 +26,7 @@ body {
   transition: 0.3s;
 }
 .cornice.scroll {
-  background: #222;
+  background: #002;
 }
 .cornice .dentil {
   box-sizing: border-box;
@@ -84,7 +84,7 @@ body {
 }
 .breadcrumb .bran.active {
   cursor: auto;
-  color: rgba(0, 17, 102, 0.995);
+  color: rgba(0, 0, 34, 0.995);
 }
 .breadcrumb .bran.active:after {
   content: '';
@@ -107,7 +107,7 @@ article .breviary {
   display: table;
   width: 100%;
   background-image: attr(img);
-  background: linear-gradient(to bottom, #222, rgba(34, 34, 34, 0.8)), url("Images/ny.jpg");
+  background: linear-gradient(to bottom, #002, rgba(0, 0, 34, 0.8)), attr();
   background-attachment: fixed;
   background-size: cover;
   padding: 3.6rem 1.8rem 1.8rem;
@@ -163,7 +163,6 @@ article .breviary .wrapper .alias li {
 }
 article .breviary .wrapper .alias li:not(:first-child):before {
   content: '|';
-  color: #ccc;
   padding-right: 1rem;
 }
 article .breviary .wrapper .source {

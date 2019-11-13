@@ -18,30 +18,12 @@ function turnTorsoPanel(ele) {
     ele.classList.toggle("active");
 }
 
-// function changeTheme() {
-//   var check = document.getElementById('check-theme');
-//   if (check.checked == true){
-//     console.log('Dark Theme');
-//     scrollClass = 'scroll';
-//     if (document.body.scrollTop > 0 ) {
-//         cornice.classList.add(scrollClass);
-//     }
-//     cornice.classList.remove('scrolle');
-//   } else {
-//     console.log('Light Theme');
-//     scrollClass = 'scrolle';
-//     cornice.classList.add(scrollClass);
-//     cornice.classList.remove('scroll');
-//   }
-// }
-
 // Loading a next article below the last article just read
 var currentNext = 1;
 var maxNext = 3;
 window.addEventListener('load', function() {
     watchNext();
-    // var breviary = document.querySelector('.breviary')
-    // breviary.style.color = breviary.getAttribute('front');
+    setTheme(document.querySelector('#article-1'))
 });
 
 function whatNext (entries, observer) {
@@ -84,8 +66,38 @@ function fillArticle (element) {
     currentNext += 1;
     element.id = `article-${currentNext}`;
     element.innerHTML += document.querySelector('#article-1').innerHTML;
-    var breviary = element.querySelector('.breviary');
-    var wrapper = breviary.querySelector('.wrapper');
+    randomTheme(element.id);
+    setTheme(element);
+    // var breviary = element.querySelector('.breviary');
+    // var wrapper = breviary.querySelector('.wrapper');
     // console.log(breviary);
     // wrapper.appendChild(separator);
+}
+
+function randomTheme (id) {
+    console.log(id);
+    var element = document.querySelector(`#${id}`);
+    var breviary = element.querySelector('.breviary');
+    var backs = ['#111111', '#220000'];
+    var fronts = ['#44ffdd', '#ffffff'];
+    breviary.setAttribute('front', fronts[Math.floor(Math.random() * fronts.length)]);
+    breviary.setAttribute("back", backs[Math.floor(Math.random() * backs.length)]);
+}
+function setTheme (element) {
+    var breviary = element.querySelector('.breviary');
+    console.log(breviary);
+    var img = breviary.getAttribute('img');
+    var font = breviary.getAttribute('font');
+    var front = breviary.getAttribute('front');
+    var back = breviary.getAttribute('back');
+
+    var title = breviary.querySelector('.title');
+    var backop = back + 'cc';
+    var cornice = document.querySelector('.cornice');
+
+    breviary.style.color = title.style.borderColor = front;
+    breviary.style.fontFamily = font;
+    breviary.style.backgroundImage = `linear-gradient(to bottom, ${back}, ${backop}), url(${img})`;
+    cornice.style.color = front;
+    cornice.style.background = back;
 }
