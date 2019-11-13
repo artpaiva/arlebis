@@ -1,0 +1,319 @@
+// Platform
+@mobile:    ~"only screen and (max-width: 720px)";
+
+// Color Palette
+@white: #fafafa;
+@bluebaby: #acf;
+@amber: #fd5;
+@burgundy: #b14;
+@black: #222;
+@marine: #016;
+@green: #2d6;
+@darkgrey: #555;
+@grey: #777;
+@lightgrey: #999;
+.color(){
+    back: @white;
+    backdark: @black;
+    front: @marine;
+    frontlight: @amber;
+    text: @darkgrey;
+}
+// Text Variables Family
+@lustria:'Lustria', serif;
+@playfair:'Playfair Display', serif;
+@western:'Rye', cursive;
+@montserrat:'Montserrat', sans-serif;
+@sizeRegular: 1rem;
+@sizeSlight: 1.1rem;
+@sizeHaut: 1.6rem;
+@sizeXXL: 1.8rem;
+.text(){
+    attire: @montserrat;
+    couture: @playfair;
+    formal: @lustria;
+}
+
+
+body{
+    #box;
+    background: .color[back];
+    font-family: .text[attire];
+    scroll-behavior: smooth;
+}
+*::selection{
+    background: .color[backdark];
+    color: .color[frontlight];
+}
+#box(){
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+#shadowed(){
+    box-shadow: 0px 3px 4px 0px fadeout(@black, 60%);
+}
+#torsoWidth(){
+    width: 100%;
+    max-width: 42rem;
+    margin: auto;
+}
+#torsoPlus(){
+    width: 100%;
+    max-width: 42rem;
+    margin: auto;
+}
+
+.cornice{
+    #box;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    // background: .color[backdark];
+    color: .color[back];
+    top: 0;
+    transition: 0.3s;
+    &.scroll{
+        background: .color[backdark];
+    }
+    .dentil{
+        #box;
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: @sizeSlight;
+        &.front{
+            font-family: .text[couture];
+            font-size: @sizeHaut;
+        }
+    }
+}
+.torso{
+    #box;
+    margin-top: @sizeRegular * 2;
+    margin: auto;
+    // padding: @sizeRegular*2 @sizeRegular;
+    background: inherit;
+}
+.breadcrumb{
+    #box; #torsoWidth;
+    width: 100%;
+    padding: 1rem 1rem 0.8rem;
+    border-bottom: 1px solid #0000000a;
+    text-align: left;
+    .bran{
+        cursor: pointer;
+        color: .color[text];
+        font-size: 1rem;
+        transition: 0.3s;
+        display: inline-block;
+        &:hover{
+            color: .color[frontlight];
+        }
+        &:after{
+            content: '›';
+            padding: @sizeHaut;
+            font-family: .text[formal];
+            font-style: normal;
+            color: @lightgrey;
+        }
+        &.active{
+          cursor: auto;
+          color: fadeout(.color[front], 0.5);
+            &:after{
+                content: '';
+            }
+        }
+    }
+}
+article{
+    #box;
+    color: .color[text];
+    margin-bottom: 1rem;
+    .breviary{
+        #box;
+        @back: attr(back);
+        @front: attr(front);
+        display: table;
+        width: 100%;
+        // height: 100vh;
+        // background: @black;
+        background-image: attr(img);
+        background: linear-gradient(to bottom, @black, fadeout(@black, 20%)), url("Images/ny.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        padding: @sizeXXL*2 @sizeXXL @sizeXXL;
+        color: .color[back];
+        font-family: @playfair;
+        text-align: center;
+        @media @mobile{
+            height: 100vh;
+            padding: @sizeRegular;
+        }
+        .wrapper{
+            #torsoPlus;#box;
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            .topic{
+                margin-bottom: @sizeRegular;
+                font-size: @sizeSlight;
+                text-transform: uppercase;
+            }
+            .title{
+                padding: @sizeRegular 0;
+                border-top: 1px solid .color[back];
+                font-size: @sizeXXL;
+            }
+            .author{
+                margin-top: @sizeRegular;
+                font-size: @sizeSlight;
+                font-style: italic;
+                &:before{
+                    content: 'by ';
+                }
+            }
+            .alias{
+                display: inline-block;
+                padding: 0.8rem;
+                font-size: @sizeSlight;
+                // border-top: 1px solid .color[back];
+                li{
+                    display: inline-block;
+                    padding: 0 0.4rem;
+                    &:not(:first-child):before{
+                        content: '|';
+                        color: #ccc;
+                        padding-right: 1rem;
+                    }
+                }
+            }
+            .source{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+            }
+            .next{
+                /*display: inline-block;*/
+                position: absolute;
+                .next;
+                margin-bottom: 0rem;
+                background-image:
+                linear-gradient(45deg, transparent 65%, @white 80%, transparent 90%),
+                linear-gradient(135deg, transparent 5%, @white 15%, transparent 25%),
+                linear-gradient(135deg, transparent 45%, @white 55%, transparent 65%),
+                linear-gradient(45deg, transparent 25%, @white 35%, transparent 50%);
+            }
+        }
+    }
+    .lane{
+        .text{
+            #box; #torsoWidth();
+            padding: 0.4rem 0.8rem;
+            line-height: @sizeRegular * 2;
+            font-size: @sizeSlight;
+            text-align: justify;
+            .info{
+                color: fadeout(.color[backdark], 50%);
+                font-size: @sizeRegular;
+                text-align: center;
+            }
+            .epigraph{
+                padding: 0.2rem 0;
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+            .blank{
+                #box;
+                width: 100%;
+                padding: @sizeHaut * 2;
+                border: 1px dashed .color[backdark];
+                background: fadeout(.color[backdark], 98%);
+            }
+            p{
+                text-indent: @sizeHaut;
+                &:first-letter{
+                    font-size: 2.8rem;
+                    font-family: @playfair;
+                }
+            }
+            br{
+                content: "";
+                display: block;
+                margin: @sizeHaut 0;
+                font-size: 20%;
+            }
+        }
+        .taglist{
+             #box; #torsoWidth();
+            margin-top: 1rem;
+            padding: 0.8rem 0.4rem;
+            border-top: 1px solid #00000011;
+            .tag{
+                cursor: pointer;
+                display: inline-block;
+                margin: 0 0.2rem;
+                padding: 0.1rem 0.2rem;
+                /*border-bottom: 1px solid #333;*/
+                text-decoration: underline;
+                color: #333;
+                font-size: 0.8rem;
+                font-weight: 700;
+                transition: 0.1s;
+            }
+        }
+        .appendix{
+            #box;
+            z-index: 100;
+            display: block;
+            position: sticky;
+            width: 100%;
+            border-top: 1px solid fadeout(.color[backdark], 95%);
+            background: .color[back];
+            text-align: center;
+            li{
+                #box;
+                display: inline-block;
+                width: 3.6rem;
+                height: 3.6rem;
+                padding: 0.8rem 0.8rem;
+                img{
+                    width: 100%;
+                    transition: 0.3s;
+                }
+            }
+            @media @mobile{
+                top: none;
+                bottom: 0;
+            }
+        }
+    }
+}
+.next{
+    #box; #torsoWidth();
+    /*display: inline-block;*/
+    margin: 0.1rem auto 3rem;
+    width: 50%;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding: 0.8rem 1rem;
+    background-image:
+    linear-gradient(45deg, transparent 65%, @black 80%, transparent 90%),
+    linear-gradient(135deg, transparent 5%, @black 15%, transparent 25%),
+    linear-gradient(135deg, transparent 45%, @black 55%, transparent 65%),
+    linear-gradient(45deg, transparent 25%, @black 35%, transparent 50%);
+    background-repeat:repeat-x;
+    background-size: 14px 4px;
+    background-position:0 100%;
+    animation: wiggle 20s linear infinite;
+}
+@keyframes wiggle {
+  0% { background-position: 0 100% }
+  100% { background-position: 100% 100% }
+}
