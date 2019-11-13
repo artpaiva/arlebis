@@ -54,6 +54,7 @@ function watchNext () {
     h.target = document.querySelector(`#${targetID}`);
     var observer = new IntersectionObserver(whatNext, options);
     observer.observe(h.target);
+    watchTheme(h.previousArticle);
 }
 
 function fillArticle (element) {
@@ -75,7 +76,6 @@ function fillArticle (element) {
 }
 
 function randomTheme (id) {
-    console.log(id);
     var element = document.querySelector(`#${id}`);
     var breviary = element.querySelector('.breviary');
     var backs = ['#111111', '#220000'];
@@ -85,7 +85,6 @@ function randomTheme (id) {
 }
 function setTheme (element) {
     var breviary = element.querySelector('.breviary');
-    console.log(breviary);
     var img = breviary.getAttribute('img');
     var font = breviary.getAttribute('font');
     var front = breviary.getAttribute('front');
@@ -100,4 +99,20 @@ function setTheme (element) {
     breviary.style.backgroundImage = `linear-gradient(to bottom, ${back}, ${backop}), url(${img})`;
     cornice.style.color = front;
     cornice.style.background = back;
+}
+function watchTheme (element) {
+    var target = element.querySelector('.breviary');
+    let options = {
+      rootMargin: window.screen.height+'px',
+      // rootMargin: '220px',
+      threshold: 0.8,
+    }
+    var observer = new IntersectionObserver((entries, observer) =>{
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                console.log('aqui estou');
+                setTheme (element);
+            }
+        });
+    }, options);
 }
