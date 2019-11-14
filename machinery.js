@@ -20,7 +20,7 @@ function turnTorsoPanel(ele) {
 
 // Loading a next article below the last article just read
 var currentNext = 1;
-var maxNext = 3;
+var maxNext = 8;
 window.addEventListener('load', function() {
     watchNext();
     var firstArticle = document.querySelector('#article-1');
@@ -72,15 +72,27 @@ function fillArticle (element) {
 function randomTheme (id) {
     var element = document.querySelector(`#${id}`);
     var breviary = element.querySelector('.breviary');
+    var fonts = ['Playfair Display', 'Montserrat', 'Lustria'];
+    var weights = ['300', '500', '700'];
     var backs = ['#111111', '#220000'];
-    var fronts = ['#44ffdd', '#ffffff'];
-    breviary.setAttribute('front', fronts[Math.floor(Math.random() * fronts.length)]);
-    breviary.setAttribute("back", backs[Math.floor(Math.random() * backs.length)]);
+    var fronts = ['#44ffdd', '#ffffff', '#55ee22', '#ff4455'];
+    var ibacks = ['#FFF136', '#ffddee'];
+    var ifronts = ['#111111', '#220000'];
+    if(Math.floor(Math.random() * 6 >= 1) ){
+        breviary.setAttribute('front', fronts[Math.floor(Math.random() * fronts.length)]);
+        breviary.setAttribute("back", backs[Math.floor(Math.random() * backs.length)]);
+    } else {
+        breviary.setAttribute('front', ifronts[Math.floor(Math.random() * ifronts.length)]);
+        breviary.setAttribute("back", ibacks[Math.floor(Math.random() * ibacks.length)]);
+    }
+    breviary.setAttribute('font', fonts[Math.floor(Math.random() * fonts.length)]);
+    breviary.setAttribute('weight', weights[Math.floor(Math.random() * weights.length)]);
 }
 function setTheme (element, all) {
     var breviary = element.querySelector('.breviary');
     var img = breviary.getAttribute('img');
     var font = breviary.getAttribute('font');
+    var weight = breviary.getAttribute('weight');
     var front = breviary.getAttribute('front');
     var back = breviary.getAttribute('back');
 
@@ -90,6 +102,7 @@ function setTheme (element, all) {
 
     breviary.style.color = title.style.borderColor = front;
     breviary.style.fontFamily = font;
+    breviary.style.fontWeight = weight;
     breviary.style.backgroundImage = `linear-gradient(to bottom, ${back}, ${backop}), url(${img})`;
     if (all) {
         cornice.style.color = front;
@@ -98,7 +111,7 @@ function setTheme (element, all) {
 }
 function watchTheme (element) {
     var target = element.querySelector('.breviary');
-    console.log(target);
+    // console.log(target);
     let options = {
         rootMargin: '10px',
         threshold: 0,
@@ -110,7 +123,7 @@ var wasAbove = false;
 function touchBreviary (entries, observer) {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
-            console.log('ENTREI');
+            // console.log('ENTREI');
             setTheme (entry.target.parentNode, true);
         }
     });
