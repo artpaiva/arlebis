@@ -110,10 +110,10 @@ function setTheme (element, all) {
     }
 }
 function watchTheme (element) {
-    var target = element.querySelector('.breviary');
+    var target = element.querySelector('.breadcrumb');
     // console.log(target);
     let options = {
-        rootMargin: '10px',
+        rootMargin: '60px',
         threshold: 0,
     }
     var observer = new IntersectionObserver(touchBreviary, options);
