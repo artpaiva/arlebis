@@ -72,10 +72,10 @@ function fillArticle (element) {
 function randomTheme (id) {
     var element = document.querySelector(`#${id}`);
     var breviary = element.querySelector('.breviary');
-    var fonts = ['Playfair Display', 'Montserrat', 'Lustria'];
+    var fonts = ['Playfair Display', 'Lustria', 'Bebas Neue', 'Open Sans Condensed'];
     var weights = ['300', '500', '700'];
-    var backs = ['#111111', '#220000'];
-    var fronts = ['#44ffdd', '#ffffff', '#55ee22', '#ff4455'];
+    var backs = ['#111111', '#220000', '#000000'];
+    var fronts = ['#44ffdd', '#ffffff', '#55ee22', '#ff4455', '#FF9C44'];
     var ibacks = ['#FFF136', '#ffddee'];
     var ifronts = ['#111111', '#220000'];
     if(Math.floor(Math.random() * 6 >= 1) ){
@@ -101,8 +101,8 @@ function setTheme (element, all) {
     var cornice = document.querySelector('.cornice');
 
     breviary.style.color = title.style.borderColor = front;
-    breviary.style.fontFamily = font;
-    breviary.style.fontWeight = weight;
+    title.style.fontFamily = font;
+    title.style.fontWeight = weight;
     breviary.style.backgroundImage = `linear-gradient(to bottom, ${back}, ${backop}), url(${img})`;
     if (all) {
         cornice.style.color = front;

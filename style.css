@@ -172,6 +172,26 @@ article .breviary .wrapper .source {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
+article .breviary .wrapper .more {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 2;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -1rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 article .breviary .wrapper .next {
   /*display: inline-block;*/
   position: absolute;
