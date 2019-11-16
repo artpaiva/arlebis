@@ -72,7 +72,7 @@ function fillArticle (element) {
 function randomTheme (id) {
     var element = document.querySelector(`#${id}`);
     var breviary = element.querySelector('.breviary');
-    var fonts = ['Playfair Display', 'Lustria', 'Bebas Neue', 'Open Sans Condensed', 'Pacifico', 'Permanent Marker', 'Russo One', 'Alata'];
+    var fonts = ['Playfair Display', 'Lustria', 'Bebas Neue', 'Pacifico', 'Permanent Marker', 'Russo One', 'Alata', 'Julius Sans One'];
     var sizes = ['3rem', '3.2rem', '2.4rem'];
     var aligns = ['justify', 'center', 'left'];
     var weights = ['300', '500', '700'];
@@ -80,6 +80,7 @@ function randomTheme (id) {
     var fronts = ['#44ffdd', '#ffffff', '#55ee22', '#ff4455', '#FF9C44'];
     var ibacks = ['#FFF136', '#ffddee'];
     var ifronts = ['#111111', '#220000'];
+    var imgs = ['Images/ny.jpg', 'Images/bvb_crowd.jpg'];
     if(Math.floor(Math.random() * 6 >= 2) ){
         breviary.setAttribute('front', fronts[Math.floor(Math.random() * fronts.length)]);
         breviary.setAttribute("back", backs[Math.floor(Math.random() * backs.length)]);
@@ -88,6 +89,7 @@ function randomTheme (id) {
         breviary.setAttribute('front', ifronts[Math.floor(Math.random() * ifronts.length)]);
         breviary.setAttribute("back", ibacks[Math.floor(Math.random() * ibacks.length)]);
     }
+    breviary.setAttribute('img', imgs[Math.floor(Math.random() * imgs.length)]);
     breviary.setAttribute('font', fonts[Math.floor(Math.random() * fonts.length)]);
     breviary.setAttribute('size', sizes[Math.floor(Math.random() * sizes.length)]);
     breviary.setAttribute('align', aligns[Math.floor(Math.random() * aligns.length)]);
