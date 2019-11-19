@@ -360,3 +360,26 @@ article .lane .appendix li img {
     background-position: 100% 100%;
   }
 }
+.tally {
+  padding: 1rem;
+  background: #111;
+  color: #fafafa;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+  list-style-type: none;
+}
+.tally .alike {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  width: 100%;
+  max-width: 42rem;
+  margin: auto;
+  padding: 1rem;
+  border-bottom: 1px solid #fafafa;
+}
+.tally .alike:last-child {
+  border-bottom: 1px solid transparent;
+}
