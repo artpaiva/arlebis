@@ -1,2 +1,2 @@
 # Arlebis
-Custom theming for each article
+A digital newspaper with custom theming for each article
