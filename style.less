@@ -205,11 +205,6 @@ article{
                 font-size: 2;
                 animation: bounce 2s ease-in-out infinite;
             }
-            @keyframes bounce {
-              0% { transform: translate(0, 0); }
-              50% { transform: translate(0, -1rem); }
-              100% { transform: translate(0, 0); }
-            }
             .next{
                 /*display: inline-block;*/
                 position: absolute;
@@ -233,7 +228,11 @@ article{
             .info{
                 color: fadeout(.color[backdark], 50%);
                 font-size: @sizeRegular;
-                text-align: center;
+                text-align: left;
+                span{
+                    float: right;
+                    display: inline-block;
+                }
             }
             .epigraph{
                 padding: 0.2rem 0;
@@ -245,7 +244,6 @@ article{
                 width: 100%;
                 padding: @sizeHaut * 2;
                 border: 1px dashed .color[backdark];
-                background: fadeout(.color[backdark], 98%);
             }
             p{
                 // text-indent: @sizeHaut;
@@ -332,9 +330,37 @@ article{
     background-position:0 100%;
     animation: wiggle 20s linear infinite;
 }
+@keyframes bounce {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(0, -1rem); }
+  100% { transform: translate(0, 0); }
+}
 @keyframes wiggle {
   0% { background-position: 0 100% }
   100% { background-position: 100% 100% }
+}
+.ellipsis{
+    #box; #torsoWidth;
+    margin-top: -2rem;
+    color: .color[text];
+    text-align: center;
+    font-size: 4.8rem;
+    list-style-type: none;
+    li{
+        #box;
+        display: inline-block;
+        animation: bounce 1.2s ease-in-out infinite;
+        letter-spacing: -1rem;
+        &:nth-child(1){
+            animation-delay: 0s;
+        }
+        &:nth-child(2){
+            animation-delay: 0.1s;
+        }
+        &:nth-child(3){
+            animation-delay: 0.2s;
+        }
+    }
 }
 .tally{
     padding: 1rem;
