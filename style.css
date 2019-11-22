@@ -364,11 +364,14 @@ article .lane .appendix li img {
 }
 .tally {
   padding: 1rem;
-  background: #111;
-  color: #fafafa;
-  font-size: 1.1rem;
+  color: #002;
   font-family: 'Playfair Display', serif;
   list-style-type: none;
+}
+.tally .tell {
+  color: rgba(0, 0, 34, 0.6);
+  font-size: 0.9rem;
+  text-align: center;
 }
 .tally .alike {
   box-sizing: border-box;
@@ -379,9 +382,32 @@ article .lane .appendix li img {
   width: 100%;
   max-width: 42rem;
   margin: auto;
-  padding: 1rem;
-  border-bottom: 1px solid #fafafa;
+  padding: 1rem 0.6rem;
+  border-bottom: 1px solid rgba(0, 0, 34, 0.2);
 }
 .tally .alike:last-child {
   border-bottom: 1px solid transparent;
+}
+.tally .alike .alias {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  list-style-type: none;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.tally .alike .alias li {
+  margin-right: 0.4rem;
+  display: inline-block;
+}
+.tally .alike .alias li:first-child {
+  color: #e6c74d;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.tally .alike .title {
+  font-size: 1.4rem;
 }

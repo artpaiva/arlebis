@@ -338,19 +338,40 @@ article{
 }
 .tally{
     padding: 1rem;
-    background: #111;
-    color: .color[back];
-    font-size: @sizeSlight;
+    // background: .color[header];
+    color: .color[header];
     font-family: .text[couture];
     list-style-type: none;
+    .tell{
+        color: fadeout(.color[header], 40%);
+        font-size: 0.9rem;
+        text-align: center;
+    }
     .alike{
         #box; #torsoWidth;
-        padding: 1rem;
-        border-bottom: 1px solid .color[back];
+        padding: 1rem 0.6rem;
+        border-bottom: 1px solid fadeout(.color[header], 80%);
         &:last-child{
             border-bottom: 1px solid transparent;
         }
+        .alias{
+            #box;
+            list-style-type: none;
+            font-size: 0.9rem;
+            text-align: left;
+            li{
+                margin-right: 0.4rem;
+                display: inline-block;
+                &:first-child{
+                    color: shade(.color[frontlight], 10%);
+                    font-family: .text[attire];
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+        }
         .title{
+            font-size: 1.4rem;
         }
     }
 }

@@ -20,7 +20,7 @@ function turnTorsoPanel(ele) {
 
 // Loading a next article below the last article just read
 var currentNext = 1;
-var maxNext = 8;
+var maxNext = 5;
 window.addEventListener('load', function() {
     watchNext();
     var firstArticle = document.querySelector('#article-1');
@@ -51,7 +51,8 @@ function watchNext () {
     var next = document.createElement('article');
     var targetID = `next-${currentNext}`;
     next.id = targetID;
-    document.querySelector('.torso').appendChild(next);
+    // document.querySelector('.torso').appendChild(next);
+    h.previousArticle.parentNode.insertBefore(next, h.previousArticle.nextSibling);
     h.target = document.querySelector(`#${targetID}`);
     var observer = new IntersectionObserver(whatNext, options);
     observer.observe(h.target);
