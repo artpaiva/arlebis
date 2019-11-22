@@ -20,7 +20,7 @@ function turnTorsoPanel(ele) {
 
 // Loading a next article below the last article just read
 var currentNext = 1;
-var maxNext = 1;
+var maxNext = 5;
 window.addEventListener('load', function() {
     watchNext();
     var firstArticle = document.querySelector('#article-1');
