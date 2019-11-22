@@ -12,6 +12,9 @@ body {
   background: #222;
   color: #fd5;
 }
+a {
+  font-weight: 700;
+}
 .cornice {
   box-sizing: border-box;
   margin: 0;
@@ -219,13 +222,14 @@ article .lane .text {
   max-width: 42rem;
   margin: auto;
   padding: 0.4rem 0.8rem;
-  line-height: 2rem;
-  font-size: 1.1rem;
+  word-spacing: 0.1rem;
+  line-height: 1.8rem;
+  font-size: 1rem;
   text-align: justify;
 }
 article .lane .text .info {
   color: rgba(34, 34, 34, 0.5);
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: left;
 }
 article .lane .text .info span {
@@ -278,10 +282,9 @@ article .lane .taglist {
 article .lane .taglist .tag {
   cursor: pointer;
   display: inline-block;
-  margin: 0 0.2rem;
+  margin: 0.4rem 0.2rem;
   padding: 0.1rem 0.2rem;
   /*border-bottom: 1px solid #333;*/
-  text-decoration: underline;
   color: #333;
   font-size: 0.8rem;
   font-weight: 700;
@@ -374,7 +377,7 @@ article .lane .appendix li img {
   width: 100%;
   max-width: 42rem;
   margin: auto;
-  margin: -1rem 0;
+  margin: -1rem auto;
   color: #555;
   text-align: center;
   font-size: 3rem;

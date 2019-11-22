@@ -46,6 +46,9 @@ body{
     background: .color[backdark];
     color: .color[frontlight];
 }
+a{
+    font-weight: 700;
+}
 #box(){
     box-sizing: border-box;
     margin: 0;
@@ -222,12 +225,13 @@ article{
         .text{
             #box; #torsoWidth();
             padding: 0.4rem 0.8rem;
-            line-height: @sizeRegular * 2;
-            font-size: @sizeSlight;
+            word-spacing: 0.1rem;
+            line-height: 1.8rem;
+            font-size: @sizeRegular;
             text-align: justify;
             .info{
                 color: fadeout(.color[backdark], 50%);
-                font-size: @sizeRegular;
+                font-size: 0.8rem;
                 text-align: left;
                 span{
                     float: right;
@@ -272,10 +276,10 @@ article{
             .tag{
                 cursor: pointer;
                 display: inline-block;
-                margin: 0 0.2rem;
+                margin: 0.4rem 0.2rem;
                 padding: 0.1rem 0.2rem;
                 /*border-bottom: 1px solid #333;*/
-                text-decoration: underline;
+                // text-decoration: underline;
                 color: #333;
                 font-size: 0.8rem;
                 font-weight: 700;
@@ -341,7 +345,7 @@ article{
 }
 .ellipsis{
     #box; #torsoWidth;
-    margin: -1rem 0;
+    margin: -1rem auto;
     color: .color[text];
     text-align: center;
     font-size: 3rem;

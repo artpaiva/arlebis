@@ -24,7 +24,7 @@ var maxNext = 5;
 window.addEventListener('load', function() {
     watchNext();
     var firstArticle = document.querySelector('#article-1');
-    setTheme(firstArticle, true)
+    setTheme(firstArticle, true);
     watchTheme(firstArticle);
 });
 
@@ -45,7 +45,7 @@ function whatNext (entries, observer) {
 function watchNext () {
     h.previousArticle = document.querySelector(`#article-${currentNext}`);
     let options = {
-      rootMargin: '10px',
+      rootMargin: '40px',
       threshold: 0.8,
     }
     var next = document.createElement('article');
