@@ -7,4 +7,4 @@ Custom recommended list.
 - Small aesthetic features.
 
 Plans
-- Set theming
+- Set theming (by names)
