@@ -5,3 +5,6 @@ ___
 Custom recommended list.
 - Breviary redesign.
 - Small aesthetic features.
+
+Plans
+- Set theming
