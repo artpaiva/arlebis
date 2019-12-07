@@ -9,3 +9,4 @@ Custom recommended list.
 Plans
 - Set theming (by names)
 - Ad section
+- Stories Feature
