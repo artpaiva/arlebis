@@ -10,3 +10,5 @@ Plans
 - Set theming (by names)
 - Ad section
 - News' stories Feature
+- App
+- Generic SEO metatags
