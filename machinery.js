@@ -73,16 +73,16 @@ function fillArticle (element) {
 function randomTheme (id) {
     var element = document.querySelector(`#${id}`);
     var breviary = element.querySelector('.breviary');
-    var fonts = ['Playfair Display', 'Lustria', 'Bebas Neue', 'Pacifico', 'Permanent Marker', 'Russo One', 'Alata', 'Julius Sans One'];
-    var sizes = ['3rem', '3.2rem', '2.4rem'];
+    var fonts = ['Playfair Display', 'Lustria', 'Bebas Neue', 'Pacifico', 'Pacifico', 'Alata', 'Julius Sans One'];
+    var sizes = ['2.6rem', '2.2rem', '2.4rem'];
     var aligns = ['justify', 'center', 'left'];
     var weights = ['300', '500', '700'];
     var backs = ['#111111', '#220000', '#000000'];
     var fronts = ['#44ffdd', '#ffffff', '#55ee22', '#ff4455', '#FF9C44'];
-    var ibacks = ['#FFF136', '#ffddee'];
-    var ifronts = ['#111111', '#220000'];
+    var ibacks = ['#FFF136', '#ffddee', '#F07DFF', '#A070FF', '#91FFBB'];
+    var ifronts = ['#111111', '#220000', '#161D69'];
     var imgs = ['Images/ny.jpg', 'Images/bvb_crowd.jpg'];
-    if(Math.floor(Math.random() * 6 >= 2) ){
+    if(Math.floor(Math.random() * 6 >= 3) ){
         breviary.setAttribute('front', fronts[Math.floor(Math.random() * fronts.length)]);
         breviary.setAttribute("back", backs[Math.floor(Math.random() * backs.length)]);
     } else {
