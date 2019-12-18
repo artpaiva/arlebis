@@ -39,8 +39,8 @@ a {
   border: 0;
   outline: none;
   display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
 }
 .cornice .dentil.front {
   font-family: 'Playfair Display', serif;
@@ -237,6 +237,7 @@ article .lane .text .info {
   color: rgba(34, 34, 34, 0.5);
   font-size: 0.8rem;
   text-align: left;
+  margin-bottom: 1.6rem;
 }
 article .lane .text .info span {
   float: right;
@@ -273,6 +274,11 @@ article .lane .text p:first-letter {
   line-height: 1;
   letter-spacing: normal;
   font-family: 'Playfair Display', serif;
+}
+article .lane .text p:first-of-type:first-letter {
+  margin-left: 0;
+  padding: 1rem 1.5rem;
+  border: 1px solid #222;
 }
 article .lane .text br {
   content: "";

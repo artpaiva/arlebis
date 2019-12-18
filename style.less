@@ -86,8 +86,8 @@ a{
     .dentil{
         #box;
         display: inline-block;
-        padding: 1rem 2rem;
-        font-size: @sizeSlight;
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
         &.front{
             font-family: .text[couture];
             font-size: @sizeHaut;
@@ -238,6 +238,7 @@ article{
                 color: fadeout(.color[backdark], 50%);
                 font-size: 0.8rem;
                 text-align: left;
+                margin-bottom: @sizeHaut;
                 span{
                     float: right;
                     display: inline-block;
@@ -270,6 +271,11 @@ article{
                     line-height: 1;
                     letter-spacing: normal;
                     font-family: @playfair;
+                }
+                &:first-of-type:first-letter{
+                    margin-left: 0;
+                    padding: 1rem 1.5rem;
+                    border: 1px solid @black
                 }
             }
             br{
