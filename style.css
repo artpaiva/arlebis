@@ -5,7 +5,7 @@ body {
   border: 0;
   outline: none;
   background: #fafafa;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lustria', serif;
   scroll-behavior: smooth;
 }
 *::selection {
@@ -14,6 +14,7 @@ body {
 }
 a {
   font-weight: 700;
+  border-bottom: 2px solid #222;
 }
 .cornice {
   box-sizing: border-box;
@@ -176,6 +177,7 @@ article .breviary .wrapper .source {
   text-transform: uppercase;
 }
 article .breviary .wrapper .more {
+  display: none;
   position: absolute;
   bottom: 30px;
   left: 0;
@@ -183,6 +185,11 @@ article .breviary .wrapper .more {
   margin: auto;
   font-size: 2;
   animation: bounce 2s ease-in-out infinite;
+}
+@media only screen and (max-width: 720px) {
+  article .breviary .wrapper .more {
+    display: block;
+  }
 }
 article .breviary .wrapper .next {
   /*display: inline-block;*/
@@ -221,11 +228,10 @@ article .lane .text {
   width: 100%;
   max-width: 42rem;
   margin: auto;
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 1.2rem;
   word-spacing: 0.1rem;
-  line-height: 1.8rem;
-  font-size: 1rem;
-  text-align: justify;
+  line-height: 2.2rem;
+  font-size: 1.05rem;
 }
 article .lane .text .info {
   color: rgba(34, 34, 34, 0.5);
@@ -239,6 +245,7 @@ article .lane .text .info span {
 article .lane .text .epigraph {
   padding: 0.2rem 0;
   font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 article .lane .text .blank {
@@ -251,12 +258,18 @@ article .lane .text .blank {
   padding: 3.2rem;
   border: 1px dashed #222;
 }
+article .lane .text p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
 article .lane .text p:first-letter {
   float: left;
   display: inline-block;
-  margin-right: 0.6rem;
+  margin-right: 1rem;
   margin-left: 0.6rem;
-  font-size: 3.2rem;
+  font-size: 3.8rem;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: normal;
   font-family: 'Playfair Display', serif;
@@ -264,8 +277,8 @@ article .lane .text p:first-letter {
 article .lane .text br {
   content: "";
   display: block;
-  margin: 1.6rem 0;
-  font-size: 20%;
+  margin: 2.4rem 0;
+  font-size: 30%;
 }
 article .lane .taglist {
   box-sizing: border-box;
