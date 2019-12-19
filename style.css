@@ -280,11 +280,50 @@ article .lane .text p:first-of-type:first-letter {
   padding: 1rem 1.6rem;
   border: 1px solid #222;
 }
+article .lane .text p.quote {
+  padding: 0 4px;
+  color: rgba(85, 85, 85, 0.8);
+  font-style: italic;
+}
+article .lane .text p.quote:first-letter {
+  font-size: 2.24rem;
+  padding: 0;
+  margin: 0;
+  float: none;
+}
+article .lane .text p.quote:before,
+article .lane .text p.quote:after {
+  font-size: 2rem;
+  font-weight: 500;
+}
+article .lane .text p.quote:before {
+  content: '“';
+  float: left;
+  margin-right: 1rem;
+}
+article .lane .text p.quote:after {
+  content: '”';
+  float: right;
+}
 article .lane .text br {
   content: "";
   display: block;
   margin: 2.4rem 0;
   font-size: 30%;
+}
+article .lane .text .author {
+  position: relative;
+  right: 0;
+  margin: -0.5rem auto 1rem;
+  font-size: 0.9rem;
+  text-align: right;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(34, 34, 34, 0.15);
+}
+article .lane .text .author span {
+  line-height: 1.6rem;
+  display: inline-block;
+  max-width: 90%;
 }
 article .lane .taglist {
   box-sizing: border-box;

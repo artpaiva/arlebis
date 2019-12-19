@@ -277,12 +277,50 @@ article{
                     padding: 1rem 1.6rem;
                     border: 1px solid @black
                 }
+                &.quote{
+                    padding: 0 4px;
+                    color: fadeout(.color[text], 20%);
+                    font-style: italic;
+                    &:first-letter{
+                        font-size: @sizeHaut*1.4;
+                        padding: 0;
+                        margin: 0;
+                        float: none;
+                    }
+                    &:before, &:after{
+                        font-size: 2rem;
+                        font-weight: 500;
+                    }
+                    &:before{
+                        content: '“';
+                        float: left;
+                        margin-right: 1rem;
+                    }
+                    &:after{
+                        content: '”';
+                        // float: right;
+                    }
+                }
             }
             br{
                 content: "";
                 display: block;
                 margin: @sizeHaut*1.5 0;
                 font-size: 30%;
+            }
+            .author{
+                position: relative;
+                right: 0;
+                margin: -0.5rem auto @sizeRegular;
+                font-size: 0.9rem;
+                text-align: right;
+                text-transform: uppercase;
+                border-top: 1px solid fadeout(.color[backdark], 85%);
+                span{
+                    line-height: 1.6rem;
+                    display: inline-block;
+                    max-width: 90%;
+                }
             }
         }
         .taglist{
