@@ -277,7 +277,7 @@ article .lane .text p:first-letter {
 }
 article .lane .text p:first-of-type:first-letter {
   margin-left: 0;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.6rem;
   border: 1px solid #222;
 }
 article .lane .text br {
