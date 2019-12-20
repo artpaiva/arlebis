@@ -303,7 +303,6 @@ article .lane .text p.quote:before {
 }
 article .lane .text p.quote:after {
   content: '”';
-  float: right;
 }
 article .lane .text br {
   content: "";
@@ -450,7 +449,7 @@ article .lane .appendix li img {
   outline: none;
   display: inline-block;
   animation: bounce 1.2s ease-in-out infinite;
-  letter-spacing: -1rem;
+  letter-spacing: -0.8rem;
 }
 .ellipsis li:nth-child(1) {
   animation-delay: 0s;
