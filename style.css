@@ -304,16 +304,10 @@ article .lane .text p.quote:before {
 article .lane .text p.quote:after {
   content: '”';
 }
-article .lane .text br {
-  content: "";
-  display: block;
-  margin: 2.4rem 0;
-  font-size: 30%;
-}
 article .lane .text .author {
   position: relative;
   right: 0;
-  margin: -0.5rem auto 1rem;
+  margin: -0.5rem auto 1.6rem;
   font-size: 0.9rem;
   text-align: right;
   text-transform: uppercase;
@@ -323,6 +317,12 @@ article .lane .text .author span {
   line-height: 1.6rem;
   display: inline-block;
   max-width: 90%;
+}
+article .lane .text br {
+  content: "";
+  display: block;
+  margin: 2.4rem 0;
+  font-size: 30%;
 }
 article .lane .taglist {
   box-sizing: border-box;

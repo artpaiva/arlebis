@@ -302,16 +302,10 @@ article{
                     }
                 }
             }
-            br{
-                content: "";
-                display: block;
-                margin: @sizeHaut*1.5 0;
-                font-size: 30%;
-            }
             .author{
                 position: relative;
                 right: 0;
-                margin: -0.5rem auto @sizeRegular;
+                margin: -0.5rem auto @sizeHaut;
                 font-size: 0.9rem;
                 text-align: right;
                 text-transform: uppercase;
@@ -321,6 +315,12 @@ article{
                     display: inline-block;
                     max-width: 90%;
                 }
+            }
+            br{
+                content: "";
+                display: block;
+                margin: @sizeHaut*1.5 0;
+                font-size: 30%;
             }
         }
         .taglist{
