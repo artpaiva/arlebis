@@ -253,8 +253,15 @@ article{
             .blank{
                 #box;
                 width: 100%;
-                padding: @sizeHaut * 2;
+                padding: @sizeHaut;
                 border: 1px dashed .color[backdark];
+                text-align: center;
+                &:after{
+                    content: 'Ad';
+                    color: fadeout(.color[text], 50%);
+                    font-family: @montserrat;
+                    text-transform: uppercase;
+                }
             }
             p{
                 // text-indent: @sizeHaut;
