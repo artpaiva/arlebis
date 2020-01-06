@@ -73,7 +73,7 @@ function fillArticle (element) {
 function randomTheme (id) {
     var element = document.querySelector(`#${id}`);
     var breviary = element.querySelector('.breviary');
-    var fonts = ['Playfair Display', 'Lustria', 'Bebas Neue', 'Pacifico', 'Pacifico', 'Alata', 'Julius Sans One'];
+    var fonts = ['Playfair Display', 'Lustria', 'Bebas Neue', 'Pacifico', 'Pacifico', 'Alata', 'Julius Sans One', 'Nunito'];
     var sizes = ['2.6rem', '2.2rem', '2.4rem'];
     var aligns = ['justify', 'center', 'left'];
     var weights = ['300', '500', '700'];
@@ -120,9 +120,11 @@ function setTheme (element, all) {
     if (all) {
         if(invert){
             cornice.style.color = back;
+            cornice.style.borderColor = back;
             cornice.style.background = front;
         } else {
             cornice.style.color = front;
+            cornice.style.borderColor = front;
             cornice.style.background = back;
         }
     }

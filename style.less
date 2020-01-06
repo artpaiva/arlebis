@@ -78,8 +78,12 @@ a{
     width: 100%;
     // background: .color[backdark];
     color: .color[back];
+    border-bottom: 4px solid .color[back];
     top: 0;
     transition: 0.3s;
+    @media @mobile{
+        border-width: 0px;
+    }
     &.scroll{
         background: .color[header];
     }

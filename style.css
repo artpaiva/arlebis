@@ -26,8 +26,14 @@ a {
   position: fixed;
   width: 100%;
   color: #fafafa;
+  border-bottom: 4px solid #fafafa;
   top: 0;
   transition: 0.3s;
+}
+@media only screen and (max-width: 720px) {
+  .cornice {
+    border-width: 0px;
+  }
 }
 .cornice.scroll {
   background: #002;
