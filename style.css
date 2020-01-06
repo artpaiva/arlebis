@@ -26,6 +26,7 @@ a {
   position: fixed;
   width: 100%;
   color: #fafafa;
+  font-family: 'Lustria', serif;
   border-bottom: 4px solid #fafafa;
   top: 0;
   transition: 0.3s;
