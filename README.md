@@ -7,6 +7,7 @@ Custom recommended list.
 - Small aesthetic features.
 
 Plans
+- Side Vertical Appendix on Desktop
 - Set theming (by names)
 - Ad section
 - News' stories Feature
