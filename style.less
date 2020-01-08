@@ -76,19 +76,23 @@ a{
 .cornice{
     #box;
     z-index: 1000;
-    position: fixed;
+    position: sticky;
     width: 100%;
     // background: .color[backdark];
     color: .color[back];
     font-family: .text[formal];
-    border-bottom: 4px solid .color[back];
+    border-bottom: 0px solid .color[back];
     top: 0;
-    transition: 0.3s;
+    transition: 0.1s;
+    transition-delay: 0.3s;
     @media @mobile{
         border-width: 0px;
+        position: fixed;
     }
     &.scroll{
         background: .color[header];
+        border-width: 3px;
+        transition-delay: 0s;
     }
     .dentil{
         #box;
