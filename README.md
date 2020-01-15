@@ -8,7 +8,7 @@ Custom recommended list.
 
 Plans
 - Side Vertical Appendix on Desktop
-- Set theming (by names)
+- Set pre-specified theming (by names)
 - Ad section
 - News' stories Feature
 - App
